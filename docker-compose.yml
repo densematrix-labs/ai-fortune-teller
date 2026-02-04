@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      - LLM_PROXY_URL=${LLM_PROXY_URL:-https://llm-proxy.densematrix.ai}
+      - LLM_PROXY_KEY=${LLM_PROXY_KEY:-sk-wskhgeyawc}
+      - LLM_MODEL=${LLM_MODEL:-gemini-2.5-flash}
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

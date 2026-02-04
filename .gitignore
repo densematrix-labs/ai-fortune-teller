@@ -2,7 +2,7 @@
 node_modules/
 __pycache__/
 *.pyc
-.venv/
+.pytest_cache/
 
 # Build
 dist/
@@ -10,7 +10,8 @@ build/
 
 # Environment
 .env
-.env.local
+.venv/
+venv/
 
 # IDE
 .vscode/
