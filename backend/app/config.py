@@ -1,8 +1,6 @@
-import os
-from dotenv import load_dotenv
+"""Backward-compatible config — delegates to app.core.config."""
+from app.core.config import settings
 
-load_dotenv()
-
-LLM_PROXY_URL = os.getenv("LLM_PROXY_URL", "https://llm-proxy.densematrix.ai")
-LLM_PROXY_KEY = os.getenv("LLM_PROXY_KEY", "")
-LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.5-flash")
+LLM_PROXY_URL = settings.LLM_PROXY_URL
+LLM_PROXY_KEY = settings.LLM_PROXY_KEY
+LLM_MODEL = settings.LLM_MODEL

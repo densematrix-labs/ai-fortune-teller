@@ -11,9 +11,10 @@ const STYLES: StyleOption[] = [
 
 interface Props {
   onSubmit: (idea: string, style: FortuneStyle) => void;
+  canUse?: boolean;
 }
 
-export default function InputPage({ onSubmit }: Props) {
+export default function InputPage({ onSubmit, canUse = true }: Props) {
   const [idea, setIdea] = useState('');
   const [style, setStyle] = useState<FortuneStyle>('tarot');
 
@@ -96,10 +97,10 @@ export default function InputPage({ onSubmit }: Props) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={handleSubmit}
-        disabled={!idea.trim()}
+        disabled={!idea.trim() || !canUse}
         className="mt-8 px-10 py-4 bg-gradient-to-r from-purple-400 to-gold-400 text-mystic-900 font-bold text-xl rounded-full disabled:opacity-40 disabled:cursor-not-allowed pulse-glow transition-all duration-300"
       >
-        开始算命 🔮
+        {canUse ? '开始算命 🔮' : '次数已用完 — 请购买'}
       </motion.button>
 
       <motion.p
