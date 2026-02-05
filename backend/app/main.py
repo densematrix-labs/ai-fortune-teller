@@ -8,9 +8,11 @@ from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
+from prometheus_fastapi_instrumentator import Instrumentator
 
 from app.core.config import settings
 from app.core.database import get_db, init_db
+from app.core.metrics import record_generation, record_token_consumed, generation_timer
 from app.models import GenerationToken, FreeTrialTracking
 from app.fortune import generate_fortune
 from app.schemas import FortuneRequest, FortuneResponse
@@ -41,6 +43,9 @@ app.add_middleware(
 # Register payment and token routers under /api
 app.include_router(payment_router, prefix="/api")
 app.include_router(tokens_router, prefix="/api")
+
+# Prometheus metrics
+Instrumentator().instrument(app).expose(app, endpoint="/api/metrics")
 
 
 class FortuneRequestWithAuth(FortuneRequest):
@@ -144,11 +149,19 @@ async def get_fortune(request: FortuneRequestWithAuth, db: AsyncSession = Depend
             detail="需要提供 device_id（免费试用）或 token（付费使用）"
         )
 
-    # Execute fortune telling
+    # Execute fortune telling with metrics
+    gen_type = "paid" if request.token else "free"
+    record_generation(gen_type)
+    
     try:
-        # Create a base FortuneRequest for generate_fortune
-        base_request = FortuneRequest(idea=request.idea, style=request.style)
-        result = await generate_fortune(base_request)
+        with generation_timer():
+            # Create a base FortuneRequest for generate_fortune
+            base_request = FortuneRequest(idea=request.idea, style=request.style)
+            result = await generate_fortune(base_request)
+        
+        if request.token:
+            record_token_consumed()
+        
         return result
     except HTTPException:
         raise
