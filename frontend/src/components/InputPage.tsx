@@ -5,7 +5,7 @@ import type { FortuneStyle, StyleOption } from '../types';
 const STYLES: StyleOption[] = [
   { id: 'tarot', name: '塔罗牌', icon: '🃏', description: '神秘塔罗揭示命运' },
   { id: 'yijing', name: '周易八卦', icon: '☯️', description: '古老易经指引方向' },
-  { id: 'zodiac', name: '星座占卜', icon: '⭐', description: '星象预示创业运势' },
+  { id: 'zodiac', name: '星座占卜', icon: '⭐', description: '星象预示人生运势' },
   { id: 'crystal', name: '水晶球', icon: '🔮', description: '水晶球窥探未来' },
 ];
 
@@ -39,10 +39,10 @@ export default function InputPage({ onSubmit, canUse = true }: Props) {
         className="text-center mb-8"
       >
         <h1 className="text-4xl md:text-6xl font-serif text-gold-400 mb-3 float-animation">
-          🔮 AI 创业算命师
+          🔮 AI 算命师
         </h1>
         <p className="text-purple-300 text-lg md:text-xl">
-          输入你的创业想法，让 AI 为你占卜创业运势
+          输入你的问题，让 AI 为你占卜人生运势
         </p>
       </motion.div>
 
@@ -56,7 +56,7 @@ export default function InputPage({ onSubmit, canUse = true }: Props) {
         <textarea
           value={idea}
           onChange={(e) => setIdea(e.target.value)}
-          placeholder="描述你的创业想法... 例如：做一个用AI帮人写周报的SaaS工具"
+          placeholder="描述你想问的问题... 例如：我最近的感情运势如何？/ 今年的事业发展怎么样？/ 我该不该跳槽？"
           className="w-full h-32 p-4 rounded-xl bg-mystic-700/80 border border-purple-400/30 text-white placeholder-purple-300/50 focus:outline-none focus:border-gold-400/60 focus:ring-2 focus:ring-gold-400/20 resize-none text-lg backdrop-blur-sm"
           maxLength={2000}
         />

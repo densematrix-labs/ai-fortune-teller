@@ -37,14 +37,13 @@ const CSS = `
 
 // Generate HTML for a single combination
 function generatePageHTML(combo) {
-  const { industry, stage, form, budget, style } = combo;
+  const { domain, questionType, timeframe, identity, style } = combo;
   
-  const title_zh = `${industry.name}${stage.name}创业算命 - ${style.name}占卜 | AI创业算命师`;
-  const title_en = `${industry.name_en} ${stage.name_en} Startup Fortune - ${style.name_en} | AI Fortune Teller`;
-  const desc = `${industry.name}${stage.name}创业运势占卜，通过${style.name}为${form.name}模式、${budget.name}预算的创业者分析前景。免费AI创业算命。`;
+  const title_zh = `${identity.name}${domain.name}${style.name}占卜 - ${timeframe.name} | AI算命师`;
+  const title_en = `${identity.name_en} ${domain.name_en} ${style.name_en} Fortune - ${timeframe.name_en} | AI Fortune Teller`;
+  const desc = `${identity.name}的${domain.name}${style.name}占卜，为你解读${timeframe.name}。${questionType.description}。免费AI算命，事业、感情、财运、健康，一切皆可问！`;
   const canonicalUrl = `${BASE_URL}/p/${combo.slug}/`;
 
-  // Unique content per page using dimension data
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -67,43 +66,43 @@ function generatePageHTML(combo) {
 </head>
 <body>
 <div class="container">
-<h1>🔮 ${industry.name} · ${stage.name} · ${style.name}占卜</h1>
+<h1>🔮 ${identity.name} · ${domain.name} · ${style.name}占卜</h1>
 
 <div class="tags">
-<span class="tag">${industry.name}</span>
-<span class="tag">${stage.name}</span>
-<span class="tag">${form.name}</span>
-<span class="tag">${budget.name}</span>
+<span class="tag">${domain.name}</span>
+<span class="tag">${questionType.name}</span>
+<span class="tag">${timeframe.name}</span>
+<span class="tag">${identity.name}</span>
 <span class="tag">${style.name}</span>
 </div>
 
-<h2>🏢 ${industry.name}创业分析</h2>
-<p>在${industry.name}领域创业，你将面临的核心挑战包括：${industry.challenges.join('、')}。但同时也蕴含着巨大的机遇：${industry.opportunities.join('、')}。</p>
-<p>关键词：${industry.keywords.join('、')}。让我们通过${style.name}来一探究竟。</p>
+<h2>🌟 ${domain.name}解读</h2>
+<p>关于${domain.name}，你需要关注的关键方面包括：${domain.aspects.join('、')}。${style.description}，让我们为你揭示命运的奥秘。</p>
+<p>关键词：${domain.keywords.join('、')}。</p>
 
-<h2>📊 ${stage.name}运势解读</h2>
-<p>处于${stage.name}的创业者需要重点关注：${stage.focus.join('、')}。${style.description}，结合你当前的阶段特点，需要特别警惕以下风险：${stage.risks.join('、')}。</p>
+<h2>🎯 ${questionType.name}</h2>
+<p>${questionType.description}。常见问题包括：${questionType.examples.join('、')}等。通过${style.name}，我们可以为你提供独特的洞见。</p>
 
-<h2>👥 ${form.name}模式建议</h2>
-<p>选择${form.name}的方式创业有其独特优势：${form.advantages.join('、')}。但也要注意可能的问题：${form.challenges.join('、')}。</p>
+<h2>👤 ${identity.name}专属建议</h2>
+<p>作为${identity.name}，你处于${identity.stage}。你可能特别关心：${identity.concerns.join('、')}。让${style.name}为你指引方向。</p>
 
-<h2>💰 ${budget.name}策略指引</h2>
-<p>在${budget.name}的条件下，推荐采取以下策略：${budget.strategies.join('、')}。这个预算范围特别适合：${budget.suitable.join('、')}。</p>
+<h2>⏰ ${timeframe.name}展望</h2>
+<p>在${timeframe.period}内，${domain.name}的重点建议：${domain.advice_focus.join('、')}。把握时机，顺势而为。</p>
 
 <div class="cta">
-<h2>✨ 获取你的完整创业运势</h2>
-<p>想要更详细的${style.name}创业分析？</p>
-<a href="${TOOL_URL}?ref=seo&industry=${industry.id}&stage=${stage.id}">立即免费算命 →</a>
+<h2>✨ 获取你的完整运势分析</h2>
+<p>想要更详细的${style.name}占卜？</p>
+<a href="${TOOL_URL}?ref=seo&domain=${domain.id}&identity=${identity.id}">立即免费算命 →</a>
 </div>
 
 <div class="related">
-<h2>🔗 相关算命</h2>
+<h2>🔗 相关占卜</h2>
 ${generateRelatedLinks(combo)}
 </div>
 
 <footer>
-<p><a href="${TOOL_URL}">AI 创业算命师</a> | <a href="https://densematrix.ai">DenseMatrix</a></p>
-<p>免费AI创业运势分析工具</p>
+<p><a href="${TOOL_URL}">AI 算命师</a> | <a href="https://densematrix.ai">DenseMatrix</a></p>
+<p>免费AI运势分析工具 — 事业、感情、财运、健康，一切皆可问</p>
 </footer>
 </div>
 </body>
@@ -114,51 +113,51 @@ ${generateRelatedLinks(combo)}
 function generateRelatedLinks(combo) {
   const links = [];
   
-  // Same industry, different stage
-  const otherStage = dimensions.stages.find(s => s.id !== combo.stage.id);
-  if (otherStage) {
-    const slug = `${combo.industry.id}-${otherStage.id}-${combo.form.id}-${combo.budget.id}-${combo.style.id}`;
-    links.push(`<a href="/p/${slug}/">${combo.industry.name} · ${otherStage.name} · ${combo.style.name}占卜</a>`);
-  }
-  
-  // Same stage, different industry  
-  const otherIndustry = dimensions.industries.find(i => i.id !== combo.industry.id);
-  if (otherIndustry) {
-    const slug = `${otherIndustry.id}-${combo.stage.id}-${combo.form.id}-${combo.budget.id}-${combo.style.id}`;
-    links.push(`<a href="/p/${slug}/">${otherIndustry.name} · ${combo.stage.name} · ${combo.style.name}占卜</a>`);
-  }
-  
-  // Same everything, different style
+  // Same domain, different style
   const otherStyle = dimensions.styles.find(s => s.id !== combo.style.id);
   if (otherStyle) {
-    const slug = `${combo.industry.id}-${combo.stage.id}-${combo.form.id}-${combo.budget.id}-${otherStyle.id}`;
-    links.push(`<a href="/p/${slug}/">${combo.industry.name} · ${combo.stage.name} · ${otherStyle.name}占卜</a>`);
+    const slug = `${combo.domain.id}-${combo.questionType.id}-${combo.timeframe.id}-${combo.identity.id}-${otherStyle.id}`;
+    links.push(`<a href="/p/${slug}/">${combo.identity.name} · ${combo.domain.name} · ${otherStyle.name}占卜</a>`);
+  }
+  
+  // Same identity, different domain
+  const otherDomain = dimensions.domains.find(d => d.id !== combo.domain.id);
+  if (otherDomain) {
+    const slug = `${otherDomain.id}-${combo.questionType.id}-${combo.timeframe.id}-${combo.identity.id}-${combo.style.id}`;
+    links.push(`<a href="/p/${slug}/">${combo.identity.name} · ${otherDomain.name} · ${combo.style.name}占卜</a>`);
+  }
+  
+  // Same everything, different timeframe
+  const otherTimeframe = dimensions.timeframes.find(t => t.id !== combo.timeframe.id);
+  if (otherTimeframe) {
+    const slug = `${combo.domain.id}-${combo.questionType.id}-${otherTimeframe.id}-${combo.identity.id}-${combo.style.id}`;
+    links.push(`<a href="/p/${slug}/">${combo.identity.name} · ${combo.domain.name} · ${otherTimeframe.name}</a>`);
   }
   
   // Link back to main tool
-  links.push(`<a href="${TOOL_URL}">🏠 返回 AI 创业算命师首页</a>`);
+  links.push(`<a href="${TOOL_URL}">🏠 返回 AI 算命师首页</a>`);
   
   return links.join('\n');
 }
 
-// ---- MAIN: Generate ALL combinations (no limit) ----
+// ---- MAIN: Generate ALL combinations ----
 console.log('🚀 开始生成 Programmatic SEO 页面...');
-console.log(`维度: ${dimensions.industries.length} 行业 × ${dimensions.stages.length} 阶段 × ${dimensions.forms.length} 形式 × ${dimensions.budgets.length} 预算 × ${dimensions.styles.length} 风格`);
+console.log(`维度: ${dimensions.domains.length} 领域 × ${dimensions.question_types.length} 问题类型 × ${dimensions.timeframes.length} 时间 × ${dimensions.identities.length} 身份 × ${dimensions.styles.length} 风格`);
 
-const total = dimensions.industries.length * dimensions.stages.length * dimensions.forms.length * dimensions.budgets.length * dimensions.styles.length;
+const total = dimensions.domains.length * dimensions.question_types.length * dimensions.timeframes.length * dimensions.identities.length * dimensions.styles.length;
 console.log(`目标页面数: ${total}`);
 
 let count = 0;
 const sitemapEntries = [];
 const today = new Date().toISOString().split('T')[0];
 
-for (const industry of dimensions.industries) {
-  for (const stage of dimensions.stages) {
-    for (const form of dimensions.forms) {
-      for (const budget of dimensions.budgets) {
+for (const domain of dimensions.domains) {
+  for (const questionType of dimensions.question_types) {
+    for (const timeframe of dimensions.timeframes) {
+      for (const identity of dimensions.identities) {
         for (const style of dimensions.styles) {
-          const slug = `${industry.id}-${stage.id}-${form.id}-${budget.id}-${style.id}`;
-          const combo = { industry, stage, form, budget, style, slug };
+          const slug = `${domain.id}-${questionType.id}-${timeframe.id}-${identity.id}-${style.id}`;
+          const combo = { domain, questionType, timeframe, identity, style, slug };
           
           const html = generatePageHTML(combo);
           
@@ -183,9 +182,9 @@ for (const industry of dimensions.industries) {
 
 console.log(`✅ 页面生成完成: ${count} 页`);
 
-// Generate sitemap (split if > 50000)
+// Generate sitemap
 console.log('📄 生成 sitemap...');
-const SITEMAP_LIMIT = 45000; // Leave room for main pages
+const SITEMAP_LIMIT = 45000;
 const sitemapChunks = [];
 
 for (let i = 0; i < sitemapEntries.length; i += SITEMAP_LIMIT) {
@@ -193,7 +192,6 @@ for (let i = 0; i < sitemapEntries.length; i += SITEMAP_LIMIT) {
 }
 
 if (sitemapChunks.length === 1) {
-  // Single sitemap - append to existing or create programmatic one
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   sitemap += `<url><loc>${BASE_URL}/</loc><lastmod>${today}</lastmod><priority>1.0</priority></url>\n`;
   sitemapEntries.forEach(url => {
@@ -202,17 +200,14 @@ if (sitemapChunks.length === 1) {
   sitemap += '</urlset>';
   fs.writeFileSync(path.join(sitemapDir, 'sitemap-programmatic.xml'), sitemap);
   
-  // Update main sitemap to be a sitemap index
   const index = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<sitemap><loc>${BASE_URL}/sitemap-main.xml</loc></sitemap>\n<sitemap><loc>${BASE_URL}/sitemap-programmatic.xml</loc></sitemap>\n</sitemapindex>`;
   
-  // Backup original sitemap as sitemap-main
   const origSitemap = path.join(sitemapDir, 'sitemap.xml');
   if (fs.existsSync(origSitemap)) {
     fs.copyFileSync(origSitemap, path.join(sitemapDir, 'sitemap-main.xml'));
   }
   fs.writeFileSync(origSitemap, index);
 } else {
-  // Multiple sitemaps needed
   sitemapChunks.forEach((chunk, idx) => {
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
     chunk.forEach(url => {
@@ -236,4 +231,4 @@ if (sitemapChunks.length === 1) {
 
 console.log(`📊 Sitemap 生成完成 (${sitemapChunks.length} 个文件)`);
 console.log(`\n🎯 总计: ${count} 个 SEO 页面生成到 frontend/public/p/`);
-console.log(`💡 部署后访问: ${BASE_URL}/p/{industry}-{stage}-{form}-{budget}-{style}/`);
+console.log(`💡 部署后访问: ${BASE_URL}/p/{domain}-{questionType}-{timeframe}-{identity}-{style}/`);

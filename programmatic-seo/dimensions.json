@@ -1,60 +1,48 @@
 {
-  "industries": [
-    {"id": "tech", "name": "科技/互联网", "name_en": "Tech/Internet", "keywords": ["科技创业","互联网创业","AI创业","软件开发"], "challenges": ["技术壁垒","用户获取","产品迭代","资金消耗快"], "opportunities": ["市场需求大","成长空间大","变现渠道多","融资机会多"]},
-    {"id": "ecommerce", "name": "电商/零售", "name_en": "E-commerce/Retail", "keywords": ["电商创业","零售创业","网店创业","直播带货"], "challenges": ["竞争激烈","库存管理","物流成本","客户获取成本高"], "opportunities": ["市场成熟","模式清晰","快速起量","现金流好"]},
-    {"id": "food", "name": "餐饮/食品", "name_en": "Food/Restaurant", "keywords": ["餐饮创业","开餐厅","食品加工","奶茶店"], "challenges": ["食品安全","选址困难","人员管理","季节波动"], "opportunities": ["刚需市场","复购率高","品牌溢价","连锁扩张"]},
-    {"id": "education", "name": "教育/培训", "name_en": "Education/Training", "keywords": ["教育创业","在线教育","培训机构","知识付费"], "challenges": ["获客成本高","师资管理","内容质量","政策风险"], "opportunities": ["需求刚性","续费率高","口碑传播","线上线下融合"]},
-    {"id": "health", "name": "医疗/健康", "name_en": "Healthcare/Wellness", "keywords": ["医疗创业","健康产业","互联网医疗","养生"], "challenges": ["资质门槛","监管严格","周期长","投入大"], "opportunities": ["市场巨大","人口老龄化","健康意识提升","技术赋能"]},
-    {"id": "finance", "name": "金融/财务", "name_en": "Finance/Fintech", "keywords": ["金融科技","理财","支付","保险科技"], "challenges": ["监管合规","牌照获取","风控能力","信任建立"], "opportunities": ["数字化转型","普惠金融","技术降本","场景金融"]},
-    {"id": "entertainment", "name": "娱乐/文创", "name_en": "Entertainment/Creative", "keywords": ["文创产业","游戏开发","短视频","内容创作"], "challenges": ["内容同质化","流量获取","变现难","生命周期短"], "opportunities": ["消费升级","IP经济","粉丝经济","平台红利"]},
-    {"id": "realestate", "name": "房产/家居", "name_en": "Real Estate/Home", "keywords": ["房产科技","智能家居","装修","房屋租赁"], "challenges": ["资金密集","周期长","政策影响大","竞争激烈"], "opportunities": ["市场规模大","智能化趋势","存量改造","社区服务"]},
-    {"id": "travel", "name": "旅游/酒店", "name_en": "Travel/Hospitality", "keywords": ["旅游创业","民宿","定制旅行","酒店管理"], "challenges": ["季节性强","疫情影响","竞争激烈","服务标准化"], "opportunities": ["消费升级","个性化需求","数字化转型","文旅融合"]},
-    {"id": "logistics", "name": "物流/供应链", "name_en": "Logistics/Supply Chain", "keywords": ["智慧物流","仓储","配送","供应链管理"], "challenges": ["重资产","利润薄","人力密集","标准化难"], "opportunities": ["电商带动","技术升级","冷链需求","跨境物流"]},
-    {"id": "agriculture", "name": "农业/食品加工", "name_en": "Agriculture/Food Processing", "keywords": ["农业科技","有机农业","食品加工","农产品电商"], "challenges": ["周期长","天气依赖","标准化难","销售渠道"], "opportunities": ["政策支持","有机需求","科技赋能","品牌农业"]},
-    {"id": "beauty", "name": "美妆/个护", "name_en": "Beauty/Personal Care", "keywords": ["美妆品牌","护肤品","美容院","个人护理"], "challenges": ["品牌建设","渠道竞争","产品安全","用户忠诚度"], "opportunities": ["颜值经济","男性市场","功效护肤","国潮崛起"]},
-    {"id": "pet", "name": "宠物/动物", "name_en": "Pet/Animal", "keywords": ["宠物经济","宠物食品","宠物医疗","宠物用品"], "challenges": ["市场分散","标准化低","竞争加剧","消费者教育"], "opportunities": ["养宠人群增长","消费升级","医疗需求","情感经济"]},
-    {"id": "automotive", "name": "汽车/出行", "name_en": "Automotive/Mobility", "keywords": ["新能源汽车","出行服务","汽车后市场","自动驾驶"], "challenges": ["资金门槛高","技术壁垒","安全合规","供应链复杂"], "opportunities": ["电动化趋势","智能化","共享出行","后市场服务"]},
-    {"id": "manufacturing", "name": "制造/工业", "name_en": "Manufacturing/Industrial", "keywords": ["智能制造","工业4.0","机器人","3D打印"], "challenges": ["投入大","周期长","技术门槛","人才稀缺"], "opportunities": ["产业升级","政策支持","进口替代","定制化生产"]},
-    {"id": "sports", "name": "体育/健身", "name_en": "Sports/Fitness", "keywords": ["健身房","运动品牌","体育培训","运动科技"], "challenges": ["重资产","获客成本","留存率","季节波动"], "opportunities": ["健康意识","全民健身","智能穿戴","赛事经济"]},
-    {"id": "legal", "name": "法律/合规", "name_en": "Legal/Compliance", "keywords": ["法律科技","合同管理","知识产权","合规咨询"], "challenges": ["专业门槛","获客难","标准化低","信任建立"], "opportunities": ["数字化需求","企业合规","知识产权保护","AI辅助"]},
-    {"id": "hr", "name": "人力资源/招聘", "name_en": "HR/Recruitment", "keywords": ["招聘平台","人力外包","企业培训","薪酬管理"], "challenges": ["平台竞争","数据质量","匹配效率","商业模式"], "opportunities": ["灵活用工","AI面试","远程办公","人才管理"]},
-    {"id": "media", "name": "传媒/广告", "name_en": "Media/Advertising", "keywords": ["新媒体","数字广告","MCN机构","自媒体"], "challenges": ["流量成本","内容同质化","变现难","平台依赖"], "opportunities": ["短视频红利","精准营销","品效合一","出海机会"]},
-    {"id": "environment", "name": "环保/新能源", "name_en": "Environment/Clean Energy", "keywords": ["碳中和","新能源","垃圾处理","节能减排"], "challenges": ["技术门槛","投入大","回报周期长","政策依赖"], "opportunities": ["政策利好","碳交易","ESG投资","技术突破"]}
+  "domains": [
+    {"id": "career", "name": "事业运势", "name_en": "Career", "keywords": ["事业运","工作运势","职业发展","升职加薪"], "aspects": ["晋升机会","职场人际","工作压力","行业发展"], "advice_focus": ["如何把握机会","人际关系处理","压力管理","职业规划"]},
+    {"id": "love", "name": "感情运势", "name_en": "Love", "keywords": ["感情运","桃花运","爱情运势","婚姻"], "aspects": ["桃花指数","感情稳定","沟通默契","家庭和谐"], "advice_focus": ["如何脱单","感情经营","沟通技巧","婚姻建议"]},
+    {"id": "wealth", "name": "财运", "name_en": "Wealth", "keywords": ["财运","偏财运","投资运","理财"], "aspects": ["正财运","偏财运","投资机会","守财能力"], "advice_focus": ["理财建议","投资方向","开源节流","财富积累"]},
+    {"id": "health", "name": "健康运势", "name_en": "Health", "keywords": ["健康运","身体状况","养生","心理健康"], "aspects": ["身体状况","精神状态","睡眠质量","疾病预防"], "advice_focus": ["养生建议","运动推荐","饮食调理","心理调适"]},
+    {"id": "study", "name": "学业运势", "name_en": "Study", "keywords": ["学业运","考试运","升学","学习效率"], "aspects": ["学习效率","考试运势","升学机会","技能提升"], "advice_focus": ["学习方法","备考建议","专业选择","能力提升"]},
+    {"id": "family", "name": "家庭运势", "name_en": "Family", "keywords": ["家庭运","亲子关系","家和万事兴","家庭和睦"], "aspects": ["家庭和谐","亲子关系","长辈健康","家庭财务"], "advice_focus": ["沟通方式","孝道建议","家庭理财","氛围营造"]},
+    {"id": "social", "name": "人际关系", "name_en": "Social", "keywords": ["人际运","贵人运","社交运势","人缘"], "aspects": ["贵人运","社交圈子","人缘指数","合作机会"], "advice_focus": ["社交技巧","贵人识别","关系维护","人脉拓展"]},
+    {"id": "travel", "name": "出行运势", "name_en": "Travel", "keywords": ["出行运","旅游运势","外出运","平安出行"], "aspects": ["出行平安","旅途顺利","方位吉凶","时间选择"], "advice_focus": ["出行时机","方位选择","注意事项","旅途建议"]}
   ],
-  "stages": [
-    {"id": "idea", "name": "想法期", "name_en": "Idea Stage", "focus": ["市场验证","需求调研","商业模式设计","团队组建"], "risks": ["方向错误","闭门造车","过度规划","团队不合"]},
-    {"id": "mvp", "name": "MVP阶段", "name_en": "MVP Stage", "focus": ["快速迭代","用户反馈","核心功能","产品市场匹配"], "risks": ["功能过多","忽视反馈","技术债务","资金消耗"]},
-    {"id": "growth", "name": "增长期", "name_en": "Growth Stage", "focus": ["用户增长","渠道拓展","团队扩张","品牌建设"], "risks": ["增长瓶颈","管理跟不上","现金流断裂","竞争加剧"]},
-    {"id": "fundraising", "name": "融资阶段", "name_en": "Fundraising Stage", "focus": ["商业计划","估值谈判","投资人关系","尽职调查"], "risks": ["估值过高","条款陷阱","融资过慢","投资人干预"]},
-    {"id": "scaling", "name": "扩张期", "name_en": "Scaling Stage", "focus": ["市场扩张","组织升级","流程标准化","国际化"], "risks": ["扩张过快","文化稀释","执行力下降","资金链断裂"]},
-    {"id": "pivot", "name": "转型期", "name_en": "Pivot Stage", "focus": ["战略调整","新方向验证","团队重组","资源重新分配"], "risks": ["方向再次错误","团队流失","士气低落","资金不足"]},
-    {"id": "mature", "name": "成熟期", "name_en": "Mature Stage", "focus": ["持续创新","利润优化","市场防御","多元化"], "risks": ["创新停滞","组织僵化","新竞争者","市场变化"]},
-    {"id": "exit", "name": "退出期", "name_en": "Exit Stage", "focus": ["估值最大化","交易结构","法律合规","过渡安排"], "risks": ["时机不对","估值缩水","交易失败","团队动荡"]}
+  "question_types": [
+    {"id": "decision", "name": "决策指引", "name_en": "Decision", "description": "面临选择时寻求指引", "examples": ["该不该跳槽","要不要表白","是否投资"]},
+    {"id": "prediction", "name": "运势预测", "name_en": "Prediction", "description": "想了解未来走势", "examples": ["近期运势如何","今年财运怎样","感情发展趋势"]},
+    {"id": "guidance", "name": "方向指引", "name_en": "Guidance", "description": "寻求人生方向", "examples": ["适合什么职业","如何提升自己","人生下一步"]},
+    {"id": "analysis", "name": "现状分析", "name_en": "Analysis", "description": "分析当前状况", "examples": ["为什么总是不顺","感情问题出在哪","财运不佳原因"]},
+    {"id": "timing", "name": "时机选择", "name_en": "Timing", "description": "选择最佳时机", "examples": ["何时跳槽最佳","什么时候表白","投资入场时机"]},
+    {"id": "compatibility", "name": "配对分析", "name_en": "Compatibility", "description": "分析人事物的契合度", "examples": ["我们合适吗","这份工作适合我吗","这个项目能成吗"]}
   ],
-  "forms": [
-    {"id": "solo", "name": "独立创业", "name_en": "Solo Founder", "advantages": ["决策快","成本低","灵活性高","全部所有权"], "challenges": ["孤军奋战","能力瓶颈","精力有限","缺乏互补"]},
-    {"id": "partnership", "name": "合伙创业", "name_en": "Partnership", "advantages": ["能力互补","分担风险","资源共享","决策讨论"], "challenges": ["意见分歧","利益分配","权责不清","合伙人离开"]},
-    {"id": "franchise", "name": "加盟连锁", "name_en": "Franchise", "advantages": ["品牌背书","模式成熟","培训支持","供应链"], "challenges": ["加盟费高","自主性低","品控难","区域限制"]},
-    {"id": "remote", "name": "远程创业", "name_en": "Remote Business", "advantages": ["成本极低","全球人才","灵活办公","生活平衡"], "challenges": ["沟通效率","团队凝聚","时区差异","文化差异"]},
-    {"id": "sideproject", "name": "副业创业", "name_en": "Side Project", "advantages": ["风险低","保底收入","灵活试错","兴趣驱动"], "challenges": ["精力不足","进度慢","难以全情投入","利益冲突"]},
-    {"id": "corporate", "name": "企业内创业", "name_en": "Intrapreneurship", "advantages": ["资源支持","品牌背书","团队现成","风险较低"], "challenges": ["官僚流程","创新受限","KPI压力","所有权模糊"]}
+  "timeframes": [
+    {"id": "today", "name": "今日运势", "name_en": "Today", "period": "24小时内", "focus": "即时指引"},
+    {"id": "week", "name": "本周运势", "name_en": "This Week", "period": "7天内", "focus": "短期规划"},
+    {"id": "month", "name": "本月运势", "name_en": "This Month", "period": "30天内", "focus": "月度安排"},
+    {"id": "quarter", "name": "季度运势", "name_en": "This Quarter", "period": "3个月内", "focus": "阶段目标"},
+    {"id": "year", "name": "年度运势", "name_en": "This Year", "period": "12个月内", "focus": "年度规划"},
+    {"id": "future", "name": "未来展望", "name_en": "Future", "period": "1-3年", "focus": "长期方向"}
   ],
-  "budgets": [
-    {"id": "bootstrap", "name": "零成本启动", "name_en": "Bootstrap ($0)", "strategies": ["开源工具","免费平台","技能变现","内容营销"], "suitable": ["软件/SaaS","自媒体","咨询服务","在线教育"]},
-    {"id": "micro", "name": "微预算(1万以下)", "name_en": "Micro Budget (<$1.5K)", "strategies": ["最小可行产品","社交营销","口碑传播","兼职团队"], "suitable": ["小程序","电商小店","工作室","社区服务"]},
-    {"id": "small", "name": "小预算(1-10万)", "name_en": "Small Budget ($1.5K-$15K)", "strategies": ["精准投放","种子用户","合作推广","线下活动"], "suitable": ["实体小店","小型工作室","本地服务","线上课程"]},
-    {"id": "medium", "name": "中等预算(10-50万)", "name_en": "Medium Budget ($15K-$75K)", "strategies": ["品牌建设","团队招聘","渠道拓展","产品打磨"], "suitable": ["中型门店","科技公司","品牌电商","连锁加盟"]},
-    {"id": "large", "name": "大预算(50-200万)", "name_en": "Large Budget ($75K-$300K)", "strategies": ["市场占领","技术研发","品牌广告","全渠道布局"], "suitable": ["大型门店","科技企业","品牌公司","区域连锁"]},
-    {"id": "venture", "name": "风投级(200万+)", "name_en": "Venture Scale ($300K+)", "strategies": ["快速扩张","行业整合","技术壁垒","国际化"], "suitable": ["高科技","平台型","生物医药","硬件制造"]}
+  "identities": [
+    {"id": "student", "name": "学生", "name_en": "Student", "concerns": ["学业","升学","就业","人际"], "stage": "求学阶段"},
+    {"id": "graduate", "name": "应届毕业生", "name_en": "Fresh Graduate", "concerns": ["求职","职业选择","租房","独立生活"], "stage": "初入社会"},
+    {"id": "employee", "name": "职场人士", "name_en": "Employee", "concerns": ["晋升","跳槽","工作压力","work-life balance"], "stage": "职业发展"},
+    {"id": "entrepreneur", "name": "创业者", "name_en": "Entrepreneur", "concerns": ["项目发展","融资","团队","市场"], "stage": "创业奋斗"},
+    {"id": "freelancer", "name": "自由职业者", "name_en": "Freelancer", "concerns": ["收入稳定","客户拓展","时间管理","技能提升"], "stage": "自主发展"},
+    {"id": "parent", "name": "为人父母", "name_en": "Parent", "concerns": ["子女教育","家庭平衡","经济压力","健康管理"], "stage": "家庭责任"},
+    {"id": "senior", "name": "中年人士", "name_en": "Middle-aged", "concerns": ["事业瓶颈","健康管理","家庭责任","财富规划"], "stage": "人生中场"},
+    {"id": "retired", "name": "退休人士", "name_en": "Retired", "concerns": ["健康养生","生活充实","家庭关系","财务安全"], "stage": "享受人生"}
   ],
   "styles": [
-    {"id": "tarot", "name": "塔罗牌", "name_en": "Tarot", "description": "通过塔罗牌阵为创业旅程提供神秘指引"},
-    {"id": "zodiac", "name": "星座运势", "name_en": "Zodiac", "description": "基于星座特质分析创业运势和建议"},
-    {"id": "yijing", "name": "易经八卦", "name_en": "I Ching", "description": "运用古老东方智慧解读创业天机"},
-    {"id": "crystal", "name": "水晶球", "name_en": "Crystal Ball", "description": "透过水晶球窥探创业未来走向"},
-    {"id": "numerology", "name": "数字命理", "name_en": "Numerology", "description": "通过生命数字解析创业密码"},
-    {"id": "fengshui", "name": "风水", "name_en": "Feng Shui", "description": "运用风水学原理优化创业布局"},
-    {"id": "palmistry", "name": "手相", "name_en": "Palmistry", "description": "从掌纹中解读创业命运线"},
-    {"id": "bazi", "name": "八字", "name_en": "Four Pillars", "description": "用生辰八字推算创业最佳时机"}
+    {"id": "tarot", "name": "塔罗牌", "name_en": "Tarot", "description": "神秘塔罗揭示命运密码"},
+    {"id": "zodiac", "name": "星座运势", "name_en": "Zodiac", "description": "星象指引人生方向"},
+    {"id": "yijing", "name": "易经八卦", "name_en": "I Ching", "description": "东方智慧解读天机"},
+    {"id": "crystal", "name": "水晶球", "name_en": "Crystal Ball", "description": "水晶之光照见未来"},
+    {"id": "numerology", "name": "数字命理", "name_en": "Numerology", "description": "数字密码解析命运"},
+    {"id": "fengshui", "name": "风水", "name_en": "Feng Shui", "description": "风水布局趋吉避凶"},
+    {"id": "palmistry", "name": "手相", "name_en": "Palmistry", "description": "掌纹之中见乾坤"},
+    {"id": "bazi", "name": "八字", "name_en": "Four Pillars", "description": "生辰八字论命理"}
   ]
 }

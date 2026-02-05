@@ -53,7 +53,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
         scale: 2,
       });
       const link = document.createElement('a');
-      link.download = `创业算命-${Date.now()}.png`;
+      link.download = `AI算命-${Date.now()}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
     } catch {
@@ -80,7 +80,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
           transition={{ delay: 0.2, type: 'spring' }}
           className="text-center mb-6"
         >
-          <p className="text-purple-300/60 text-sm mb-2">🔮 AI 创业算命师</p>
+          <p className="text-purple-300/60 text-sm mb-2">🔮 AI 算命师</p>
           <h2
             className="text-4xl md:text-5xl font-serif font-bold mb-2"
             style={{ color: fortuneColor }}

@@ -84,7 +84,7 @@ export default function PricingPage() {
           <h1 className="text-3xl md:text-4xl font-serif text-gold-400 mb-3">
             ✨ 购买算命次数
           </h1>
-          <p className="text-purple-300 text-lg">解锁更多次数，探索创业运势</p>
+          <p className="text-purple-300 text-lg">解锁更多次数，探索人生运势</p>
           <p className="text-purple-300/40 text-sm mt-2 bg-mystic-700/50 inline-block px-3 py-1 rounded-lg">
             🎁 每台设备可免费试用 1 次
           </p>
