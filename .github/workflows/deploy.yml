@@ -58,7 +58,9 @@ jobs:
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
             cd ${{ env.DEPLOY_PATH }}
-            docker compose down
+            docker compose down --remove-orphans --volumes || true
+            docker rm -f fortune-postgres fortune-backend fortune-frontend 2>/dev/null || true
+            docker network rm fortune-network 2>/dev/null || true
             docker compose up -d --build
             
       - name: Health check
