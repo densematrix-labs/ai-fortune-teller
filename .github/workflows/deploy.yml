@@ -32,6 +32,12 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
+            # Create directory and clone if not exists
+            if [ ! -d "${{ env.DEPLOY_PATH }}" ]; then
+              sudo mkdir -p ${{ env.DEPLOY_PATH }}
+              sudo chown $USER:$USER ${{ env.DEPLOY_PATH }}
+              git clone https://github.com/${{ github.repository }}.git ${{ env.DEPLOY_PATH }}
+            fi
             cd ${{ env.DEPLOY_PATH }}
             git pull origin main
             
