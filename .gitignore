@@ -23,4 +23,5 @@ Thumbs.db
 
 # Programmatic SEO (generated at build time)
 frontend/public/p/
-frontend/public/sitemap-programmatic.xml
+frontend/public/sitemap-programmatic*.xml
+programmatic-seo/generated-pages/
