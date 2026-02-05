@@ -1,0 +1,190 @@
+{
+  "timestamp": "2026-02-05T02:45:21.571Z",
+  "totalPages": 50,
+  "samplePages": [
+    {
+      "index": 1,
+      "url": "tech/idea/solo/bootstrap/tarot",
+      "fileName": "tech_idea_solo_bootstrap_tarot.html",
+      "title": "科技/互联网想法期创业算命 - 塔罗牌占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "塔罗牌占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "tech/idea/solo/bootstrap/yijing",
+      "fileName": "tech_idea_solo_bootstrap_yijing.html",
+      "title": "科技/互联网想法期创业算命 - 周易八卦占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "周易八卦占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "tech/idea/solo/bootstrap/zodiac",
+      "fileName": "tech_idea_solo_bootstrap_zodiac.html",
+      "title": "科技/互联网想法期创业算命 - 星座占卜占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "星座占卜占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 4,
+      "url": "tech/idea/solo/bootstrap/crystal",
+      "fileName": "tech_idea_solo_bootstrap_crystal.html",
+      "title": "科技/互联网想法期创业算命 - 水晶球占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "水晶球占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 5,
+      "url": "tech/idea/solo/small/tarot",
+      "fileName": "tech_idea_solo_small_tarot.html",
+      "title": "科技/互联网想法期创业算命 - 塔罗牌占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "塔罗牌占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 6,
+      "url": "tech/idea/solo/small/yijing",
+      "fileName": "tech_idea_solo_small_yijing.html",
+      "title": "科技/互联网想法期创业算命 - 周易八卦占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "周易八卦占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 7,
+      "url": "tech/idea/solo/small/zodiac",
+      "fileName": "tech_idea_solo_small_zodiac.html",
+      "title": "科技/互联网想法期创业算命 - 星座占卜占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "星座占卜占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 8,
+      "url": "tech/idea/solo/small/crystal",
+      "fileName": "tech_idea_solo_small_crystal.html",
+      "title": "科技/互联网想法期创业算命 - 水晶球占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "水晶球占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 9,
+      "url": "tech/idea/solo/medium/tarot",
+      "fileName": "tech_idea_solo_medium_tarot.html",
+      "title": "科技/互联网想法期创业算命 - 塔罗牌占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "塔罗牌占卜",
+        "个人独立创业"
+      ]
+    },
+    {
+      "index": 10,
+      "url": "tech/idea/solo/medium/yijing",
+      "fileName": "tech_idea_solo_medium_yijing.html",
+      "title": "科技/互联网想法期创业算命 - 周易八卦占卜",
+      "keywords": [
+        "科技/互联网创业",
+        "想法期创业",
+        "周易八卦占卜",
+        "个人独立创业"
+      ]
+    }
+  ],
+  "urlStructure": "/{industry}/{stage}/{form}/{budget}/{style}",
+  "dimensions": {
+    "industries": 5,
+    "stages": 5,
+    "forms": 4,
+    "budgets": 5,
+    "styles": 4
+  },
+  "totalPossibleCombinations": 2000,
+  "files": {
+    "htmlPages": [
+      "tech_idea_solo_bootstrap_tarot.html",
+      "tech_idea_solo_bootstrap_yijing.html",
+      "tech_idea_solo_bootstrap_zodiac.html",
+      "tech_idea_solo_bootstrap_crystal.html",
+      "tech_idea_solo_small_tarot.html",
+      "tech_idea_solo_small_yijing.html",
+      "tech_idea_solo_small_zodiac.html",
+      "tech_idea_solo_small_crystal.html",
+      "tech_idea_solo_medium_tarot.html",
+      "tech_idea_solo_medium_yijing.html",
+      "tech_idea_solo_medium_zodiac.html",
+      "tech_idea_solo_medium_crystal.html",
+      "tech_idea_solo_large_tarot.html",
+      "tech_idea_solo_large_yijing.html",
+      "tech_idea_solo_large_zodiac.html",
+      "tech_idea_solo_large_crystal.html",
+      "tech_idea_solo_fundraising_tarot.html",
+      "tech_idea_solo_fundraising_yijing.html",
+      "tech_idea_solo_fundraising_zodiac.html",
+      "tech_idea_solo_fundraising_crystal.html",
+      "tech_idea_partnership_bootstrap_tarot.html",
+      "tech_idea_partnership_bootstrap_yijing.html",
+      "tech_idea_partnership_bootstrap_zodiac.html",
+      "tech_idea_partnership_bootstrap_crystal.html",
+      "tech_idea_partnership_small_tarot.html",
+      "tech_idea_partnership_small_yijing.html",
+      "tech_idea_partnership_small_zodiac.html",
+      "tech_idea_partnership_small_crystal.html",
+      "tech_idea_partnership_medium_tarot.html",
+      "tech_idea_partnership_medium_yijing.html",
+      "tech_idea_partnership_medium_zodiac.html",
+      "tech_idea_partnership_medium_crystal.html",
+      "tech_idea_partnership_large_tarot.html",
+      "tech_idea_partnership_large_yijing.html",
+      "tech_idea_partnership_large_zodiac.html",
+      "tech_idea_partnership_large_crystal.html",
+      "tech_idea_partnership_fundraising_tarot.html",
+      "tech_idea_partnership_fundraising_yijing.html",
+      "tech_idea_partnership_fundraising_zodiac.html",
+      "tech_idea_partnership_fundraising_crystal.html",
+      "tech_idea_franchise_bootstrap_tarot.html",
+      "tech_idea_franchise_bootstrap_yijing.html",
+      "tech_idea_franchise_bootstrap_zodiac.html",
+      "tech_idea_franchise_bootstrap_crystal.html",
+      "tech_idea_franchise_small_tarot.html",
+      "tech_idea_franchise_small_yijing.html",
+      "tech_idea_franchise_small_zodiac.html",
+      "tech_idea_franchise_small_crystal.html",
+      "tech_idea_franchise_medium_tarot.html",
+      "tech_idea_franchise_medium_yijing.html"
+    ],
+    "sitemap": "sitemap_programmatic.xml"
+  }
+}
