@@ -1,0 +1,94 @@
+{
+  "title": "AI 점술사",
+  "subtitle": "질문을 입력하면 AI가 당신의 운세를 점쳐드립니다",
+  "inputPlaceholder": "질문을 입력하세요... 예: 최근 연애운은? / 올해 직장운은? / 이직해야 할까요?",
+  "charCount": "{{count}}/2000",
+  "styles": {
+    "tarot": {
+      "name": "타로",
+      "description": "신비로운 카드가 운명을 밝힌다"
+    },
+    "yijing": {
+      "name": "주역",
+      "description": "고대의 지혜가 길을 안내한다"
+    },
+    "zodiac": {
+      "name": "별자리",
+      "description": "별이 당신의 운세를 예언한다"
+    },
+    "crystal": {
+      "name": "수정구슬",
+      "description": "미래를 들여다본다"
+    }
+  },
+  "startFortune": "점 보기 🔮",
+  "noCredits": "횟수 없음 — 구매하기",
+  "disclaimer": "오락 목적으로만 제공",
+  "loading": {
+    "tarot": ["카드를 섞는 중...", "배열을 펼치는 중...", "운명의 바퀴가 돈다...", "카드를 해석 중..."],
+    "yijing": ["산가지를 던지는 중...", "괘가 형성되는 중...", "하늘의 지혜가 나타난다...", "신탁을 해석 중..."],
+    "zodiac": ["별을 읽는 중...", "행성이 정렬되는 중...", "출생 차트를 해독 중...", "우주 에너지 집중..."],
+    "crystal": ["수정구슬이 빛난다...", "안개가 걷힌다...", "환영이 나타난다...", "미래를 감지 중..."]
+  },
+  "result": {
+    "header": "AI 점술사",
+    "reading": "운세 해석",
+    "luckIndex": "행운 지수",
+    "advice": "행운 팁",
+    "saveShare": "저장 및 공유",
+    "tryAgain": "다시 보기",
+    "watermark": "fortune.demo.densematrix.ai · 오락 목적으로만",
+    "generateFailed": "이미지 생성 실패. 스크린샷으로 공유해주세요."
+  },
+  "scores": {
+    "spread": "확산운",
+    "funding": "투자운",
+    "tech": "기술운",
+    "users": "사용자운",
+    "competition": "경쟁운"
+  },
+  "credits": {
+    "remaining": "{{count}}회 남음",
+    "freeTrial": "무료 체험 1회",
+    "exhausted": "횟수 없음",
+    "buy": "횟수 구매"
+  },
+  "pricing": {
+    "title": "점술 횟수 구매",
+    "subtitle": "더 많은 점술로 당신의 운명을 탐구하세요",
+    "freeTrialNote": "기기당 1회 무료 체험",
+    "backHome": "← 홈으로 돌아가기",
+    "popular": "인기",
+    "perSession": "회당",
+    "save": "절약",
+    "buyNow": "지금 구매",
+    "processing": "처리 중...",
+    "paymentError": "결제 실패. 다시 시도해주세요.",
+    "securePayment": "Creem 보안 결제 · 일회성 구매, 구독 없음",
+    "features": {
+      "styles": "4가지 점술 스타일",
+      "radar": "5차원 행운 레이더",
+      "advice": "AI 행운 팁",
+      "share": "공유 가능한 결과 카드"
+    },
+    "products": {
+      "fortune_pack_3": "3회 팩",
+      "fortune_pack_10": "10회 팩"
+    }
+  },
+  "success": {
+    "title": "결제 성공!",
+    "subtitle": "횟수가 계정에 추가되었습니다",
+    "loadingToken": "토큰 로딩 중...",
+    "tokenLabel": "당신의 토큰 (저장해두세요)",
+    "copy": "복사",
+    "copied": "복사됨!",
+    "tokenHint": "이 토큰으로 다른 기기에서도 횟수를 복원할 수 있습니다",
+    "startFortune": "점 보기 시작",
+    "buyMore": "더 구매"
+  },
+  "errors": {
+    "fortuneFailed": "점술 실패",
+    "creditsExhausted": "무료 체험을 사용했습니다. 계속하려면 횟수를 구매하세요."
+  }
+}

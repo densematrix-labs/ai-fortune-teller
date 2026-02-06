@@ -1,0 +1,94 @@
+{
+  "title": "AI占い師",
+  "subtitle": "質問を入力して、AIがあなたの運勢を占います",
+  "inputPlaceholder": "質問を入力してください... 例：最近の恋愛運は？/ 今年の仕事運は？/ 転職すべき？",
+  "charCount": "{{count}}/2000",
+  "styles": {
+    "tarot": {
+      "name": "タロット",
+      "description": "神秘のカードが運命を示す"
+    },
+    "yijing": {
+      "name": "易経",
+      "description": "古代の知恵が導く"
+    },
+    "zodiac": {
+      "name": "星占い",
+      "description": "星が運勢を予言する"
+    },
+    "crystal": {
+      "name": "水晶玉",
+      "description": "未来を見通す"
+    }
+  },
+  "startFortune": "占いを始める 🔮",
+  "noCredits": "回数がありません — 購入",
+  "disclaimer": "娯楽目的のみ",
+  "loading": {
+    "tarot": ["カードをシャッフル中...", "スプレッドを配置中...", "運命の輪が回る...", "カードを解読中..."],
+    "yijing": ["筮竹を投げる...", "卦が形成される...", "天の知恵が現れる...", "神託を解釈中..."],
+    "zodiac": ["星を読む...", "惑星が整列する...", "出生図を解読中...", "宇宙エネルギー集中..."],
+    "crystal": ["水晶玉が輝く...", "霧が晴れる...", "ビジョンが現れる...", "未来を感知中..."]
+  },
+  "result": {
+    "header": "AI占い師",
+    "reading": "運勢の解読",
+    "luckIndex": "幸運指数",
+    "advice": "開運アドバイス",
+    "saveShare": "保存して共有",
+    "tryAgain": "もう一度占う",
+    "watermark": "fortune.demo.densematrix.ai · 娯楽目的のみ",
+    "generateFailed": "画像生成に失敗しました。スクリーンショットで共有してください。"
+  },
+  "scores": {
+    "spread": "拡散運",
+    "funding": "資金運",
+    "tech": "技術運",
+    "users": "ユーザー運",
+    "competition": "競争運"
+  },
+  "credits": {
+    "remaining": "残り {{count}} 回",
+    "freeTrial": "無料お試し 1 回",
+    "exhausted": "回数なし",
+    "buy": "回数を購入"
+  },
+  "pricing": {
+    "title": "占い回数を購入",
+    "subtitle": "もっと占って、運命を探求",
+    "freeTrialNote": "デバイスごとに1回無料お試し",
+    "backHome": "← ホームに戻る",
+    "popular": "人気",
+    "perSession": "1回あたり",
+    "save": "お得",
+    "buyNow": "今すぐ購入",
+    "processing": "処理中...",
+    "paymentError": "支払いに失敗しました。もう一度お試しください。",
+    "securePayment": "Creem による安全な支払い · 一回限りの購入、定期購読なし",
+    "features": {
+      "styles": "4つの占いスタイル",
+      "radar": "5次元幸運レーダー",
+      "advice": "AI開運アドバイス",
+      "share": "共有可能な結果カード"
+    },
+    "products": {
+      "fortune_pack_3": "3回パック",
+      "fortune_pack_10": "10回パック"
+    }
+  },
+  "success": {
+    "title": "支払い成功！",
+    "subtitle": "回数がアカウントに追加されました",
+    "loadingToken": "トークンを読み込み中...",
+    "tokenLabel": "あなたのトークン（保存してください）",
+    "copy": "コピー",
+    "copied": "コピー完了！",
+    "tokenHint": "このトークンで他のデバイスでも回数を復元できます",
+    "startFortune": "占いを始める",
+    "buyMore": "もっと購入"
+  },
+  "errors": {
+    "fortuneFailed": "占いに失敗しました",
+    "creditsExhausted": "無料お試しを使用しました。続けるには回数を購入してください。"
+  }
+}

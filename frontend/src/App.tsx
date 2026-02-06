@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import InputPage from './components/InputPage';
 import LoadingPage from './components/LoadingPage';
 import ResultPage from './components/ResultPage';
@@ -12,6 +13,7 @@ import type { FortuneResult, FortuneStyle } from './types';
 type Page = 'input' | 'loading' | 'result';
 
 export default function App() {
+  const { t } = useTranslation();
   const [page, setPage] = useState<Page>('input');
   const [idea, setIdea] = useState('');
   const [style, setStyle] = useState<FortuneStyle>('tarot');
@@ -82,9 +84,9 @@ export default function App() {
       await new Promise((r) => setTimeout(r, 2000));
       setPage('result');
     } catch (err) {
-      const message = err instanceof Error ? err.message : '算命失败';
+      const message = err instanceof Error ? err.message : t('errors.fortuneFailed');
       if (message.includes('402') || message.includes('免费试用') || message.includes('Token')) {
-        setError('免费次数已用完，请购买算命次数继续使用');
+        setError(t('errors.creditsExhausted'));
         setHasFreeTrial(false);
       } else {
         setError(message);
@@ -108,22 +110,22 @@ export default function App() {
       <div className="fixed top-4 right-4 z-50 flex items-center gap-3">
         {totalCredits > 0 ? (
           <span className="text-gold-400 text-sm bg-mystic-700/80 px-3 py-1.5 rounded-lg border border-gold-400/30 backdrop-blur-sm">
-            ✨ 剩余 {totalCredits} 次
+            ✨ {t('credits.remaining', { count: totalCredits })}
           </span>
         ) : hasFreeTrial ? (
           <span className="text-green-400 text-sm bg-mystic-700/80 px-3 py-1.5 rounded-lg border border-green-400/30 backdrop-blur-sm">
-            🎁 免费试用 1 次
+            🎁 {t('credits.freeTrial')}
           </span>
         ) : (
           <span className="text-red-400 text-sm bg-mystic-700/80 px-3 py-1.5 rounded-lg border border-red-400/30 backdrop-blur-sm">
-            次数已用完
+            {t('credits.exhausted')}
           </span>
         )}
         <Link
           to="/pricing"
           className="text-purple-300 text-sm bg-mystic-700/80 px-3 py-1.5 rounded-lg border border-purple-400/30 hover:border-purple-400/60 backdrop-blur-sm transition-colors"
         >
-          💰 购买次数
+          💰 {t('credits.buy')}
         </Link>
       </div>
 

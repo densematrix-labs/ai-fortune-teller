@@ -1,12 +1,6 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import type { FortuneStyle } from '../types';
-
-const LOADING_TEXTS: Record<FortuneStyle, string[]> = {
-  tarot: ['正在洗牌...', '塔罗牌正在排列...', '命运之轮开始转动...', '解读牌面含义...'],
-  yijing: ['掐指一算...', '卦象正在生成...', '天机即将显现...', '解读卦辞爻辞...'],
-  zodiac: ['查看星象...', '行星正在排列...', '解读你的命运星盘...', '星座能量汇聚...'],
-  crystal: ['水晶球开始发光...', '迷雾渐渐散开...', '未来画面浮现...', '灵力感应中...'],
-};
 
 const STYLE_EMOJIS: Record<FortuneStyle, string> = {
   tarot: '🃏',
@@ -20,7 +14,8 @@ interface Props {
 }
 
 export default function LoadingPage({ style }: Props) {
-  const texts = LOADING_TEXTS[style];
+  const { t } = useTranslation();
+  const texts = t(`loading.${style}`, { returnObjects: true }) as string[];
   const emoji = STYLE_EMOJIS[style];
 
   return (

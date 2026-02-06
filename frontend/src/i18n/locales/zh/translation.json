@@ -1,0 +1,94 @@
+{
+  "title": "AI 算命师",
+  "subtitle": "输入你的问题，让 AI 为你占卜人生运势",
+  "inputPlaceholder": "描述你想问的问题... 例如：我最近的感情运势如何？/ 今年的事业发展怎么样？/ 我该不该跳槽？",
+  "charCount": "{{count}}/2000",
+  "styles": {
+    "tarot": {
+      "name": "塔罗牌",
+      "description": "神秘塔罗揭示命运"
+    },
+    "yijing": {
+      "name": "周易八卦",
+      "description": "古老易经指引方向"
+    },
+    "zodiac": {
+      "name": "星座占卜",
+      "description": "星象预示人生运势"
+    },
+    "crystal": {
+      "name": "水晶球",
+      "description": "水晶球窥探未来"
+    }
+  },
+  "startFortune": "开始算命 🔮",
+  "noCredits": "次数已用完 — 请购买",
+  "disclaimer": "纯属娱乐，仅供参考",
+  "loading": {
+    "tarot": ["正在洗牌...", "塔罗牌正在排列...", "命运之轮开始转动...", "解读牌面含义..."],
+    "yijing": ["掐指一算...", "卦象正在生成...", "天机即将显现...", "解读卦辞爻辞..."],
+    "zodiac": ["查看星象...", "行星正在排列...", "解读你的命运星盘...", "星座能量汇聚..."],
+    "crystal": ["水晶球开始发光...", "迷雾渐渐散开...", "未来画面浮现...", "灵力感应中..."]
+  },
+  "result": {
+    "header": "AI 算命师",
+    "reading": "运势解读",
+    "luckIndex": "幸运指数",
+    "advice": "开运建议",
+    "saveShare": "保存分享卡片",
+    "tryAgain": "再算一次",
+    "watermark": "fortune.demo.densematrix.ai · 纯属娱乐",
+    "generateFailed": "生成图片失败，请截图分享"
+  },
+  "scores": {
+    "spread": "传播运",
+    "funding": "融资运",
+    "tech": "技术运",
+    "users": "用户运",
+    "competition": "竞品运"
+  },
+  "credits": {
+    "remaining": "剩余 {{count}} 次",
+    "freeTrial": "免费试用 1 次",
+    "exhausted": "次数已用完",
+    "buy": "购买次数"
+  },
+  "pricing": {
+    "title": "购买算命次数",
+    "subtitle": "解锁更多次数，探索人生运势",
+    "freeTrialNote": "每台设备可免费试用 1 次",
+    "backHome": "返回首页",
+    "popular": "推荐",
+    "perSession": "每次",
+    "save": "省",
+    "buyNow": "立即购买",
+    "processing": "处理中...",
+    "paymentError": "创建支付失败，请稍后重试",
+    "securePayment": "支付由 Creem 安全处理 · 一次性购买，无订阅",
+    "features": {
+      "styles": "四种算命风格任选",
+      "radar": "五维运势雷达图",
+      "advice": "AI 开运建议",
+      "share": "可分享结果卡片"
+    },
+    "products": {
+      "fortune_pack_3": "3 次算命",
+      "fortune_pack_10": "10 次算命"
+    }
+  },
+  "success": {
+    "title": "支付成功！",
+    "subtitle": "算命次数已添加到你的账户",
+    "loadingToken": "正在加载 Token...",
+    "tokenLabel": "你的 Token（请妥善保管）",
+    "copy": "复制",
+    "copied": "已复制!",
+    "tokenHint": "可用此 Token 在其他设备上恢复算命次数",
+    "startFortune": "开始算命",
+    "buyMore": "购买更多"
+  },
+  "errors": {
+    "fortuneFailed": "算命失败",
+    "creditsExhausted": "免费次数已用完，请购买算命次数继续使用"
+  }
+}

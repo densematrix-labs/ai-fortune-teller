@@ -1,0 +1,94 @@
+{
+  "title": "AI Wahrsager",
+  "subtitle": "Stelle deine Frage und lass die KI dein Schicksal deuten",
+  "inputPlaceholder": "Beschreibe deine Frage... z.B.: Wie steht es um meine Liebe? / Wird meine Karriere dieses Jahr blühen? / Sollte ich den Job wechseln?",
+  "charCount": "{{count}}/2000",
+  "styles": {
+    "tarot": {
+      "name": "Tarot",
+      "description": "Mystische Karten enthüllen das Schicksal"
+    },
+    "yijing": {
+      "name": "I Ging",
+      "description": "Alte Weisheit zeigt den Weg"
+    },
+    "zodiac": {
+      "name": "Astrologie",
+      "description": "Sterne sagen dein Glück voraus"
+    },
+    "crystal": {
+      "name": "Kristallkugel",
+      "description": "Blicke in die Zukunft"
+    }
+  },
+  "startFortune": "Weissagen 🔮",
+  "noCredits": "Keine Guthaben — Kaufen",
+  "disclaimer": "Nur zur Unterhaltung",
+  "loading": {
+    "tarot": ["Karten mischen...", "Auslegen...", "Das Rad des Schicksals dreht sich...", "Karten deuten..."],
+    "yijing": ["Schafgarbe werfen...", "Hexagramm bildet sich...", "Himmlische Weisheit erscheint...", "Orakel interpretieren..."],
+    "zodiac": ["Sterne lesen...", "Planeten ausrichten...", "Geburtshoroskop deuten...", "Kosmische Energie sammeln..."],
+    "crystal": ["Kristallkugel leuchtet...", "Nebel lichtet sich...", "Visionen erscheinen...", "Zukunft erspüren..."]
+  },
+  "result": {
+    "header": "AI Wahrsager",
+    "reading": "Schicksalsdeutung",
+    "luckIndex": "Glücksindex",
+    "advice": "Glückstipps",
+    "saveShare": "Speichern & Teilen",
+    "tryAgain": "Nochmal",
+    "watermark": "fortune.demo.densematrix.ai · Nur zur Unterhaltung",
+    "generateFailed": "Bild konnte nicht erstellt werden. Bitte Screenshot machen."
+  },
+  "scores": {
+    "spread": "Viralität",
+    "funding": "Investition",
+    "tech": "Technologie",
+    "users": "Nutzerwachstum",
+    "competition": "Wettbewerb"
+  },
+  "credits": {
+    "remaining": "{{count}} übrig",
+    "freeTrial": "1 gratis Test",
+    "exhausted": "Kein Guthaben",
+    "buy": "Guthaben kaufen"
+  },
+  "pricing": {
+    "title": "Weissagungen kaufen",
+    "subtitle": "Mehr Deutungen freischalten und dein Schicksal erkunden",
+    "freeTrialNote": "1 gratis Deutung pro Gerät",
+    "backHome": "← Zurück zur Startseite",
+    "popular": "Beliebt",
+    "perSession": "pro Deutung",
+    "save": "Spare",
+    "buyNow": "Jetzt kaufen",
+    "processing": "Verarbeitung...",
+    "paymentError": "Zahlung fehlgeschlagen. Bitte erneut versuchen.",
+    "securePayment": "Sichere Zahlung über Creem · Einmalkauf, kein Abo",
+    "features": {
+      "styles": "4 Wahrsagestile",
+      "radar": "5-Dimensionen-Glücksradar",
+      "advice": "KI-gestützte Glückstipps",
+      "share": "Teilbare Ergebniskarten"
+    },
+    "products": {
+      "fortune_pack_3": "3 Deutungen",
+      "fortune_pack_10": "10 Deutungen"
+    }
+  },
+  "success": {
+    "title": "Zahlung erfolgreich!",
+    "subtitle": "Guthaben wurde deinem Konto hinzugefügt",
+    "loadingToken": "Token wird geladen...",
+    "tokenLabel": "Dein Token (bitte speichern)",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "tokenHint": "Mit diesem Token kannst du Guthaben auf anderen Geräten wiederherstellen",
+    "startFortune": "Weissagung starten",
+    "buyMore": "Mehr kaufen"
+  },
+  "errors": {
+    "fortuneFailed": "Weissagung fehlgeschlagen",
+    "creditsExhausted": "Gratis-Test verwendet. Bitte Guthaben kaufen um fortzufahren."
+  }
+}

@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import {
   Radar,
   RadarChart,
@@ -20,14 +21,6 @@ const FORTUNE_COLORS: Record<string, string> = {
   '凶': '#ef4444',
 };
 
-const SCORE_LABELS: Record<string, string> = {
-  spread: '传播运',
-  funding: '融资运',
-  tech: '技术运',
-  users: '用户运',
-  competition: '竞品运',
-};
-
 interface Props {
   result: FortuneResult;
   idea: string;
@@ -35,10 +28,11 @@ interface Props {
 }
 
 export default function ResultPage({ result, idea, onReset }: Props) {
+  const { t } = useTranslation();
   const cardRef = useRef<HTMLDivElement>(null);
 
   const chartData = Object.entries(result.scores).map(([key, value]) => ({
-    subject: SCORE_LABELS[key] || key,
+    subject: t(`scores.${key}`),
     value,
     fullMark: 100,
   }));
@@ -53,11 +47,11 @@ export default function ResultPage({ result, idea, onReset }: Props) {
         scale: 2,
       });
       const link = document.createElement('a');
-      link.download = `AI算命-${Date.now()}.png`;
+      link.download = `AI-Fortune-${Date.now()}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
     } catch {
-      alert('生成图片失败，请截图分享');
+      alert(t('result.generateFailed'));
     }
   };
 
@@ -80,7 +74,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
           transition={{ delay: 0.2, type: 'spring' }}
           className="text-center mb-6"
         >
-          <p className="text-purple-300/60 text-sm mb-2">🔮 AI 算命师</p>
+          <p className="text-purple-300/60 text-sm mb-2">🔮 {t('result.header')}</p>
           <h2
             className="text-4xl md:text-5xl font-serif font-bold mb-2"
             style={{ color: fortuneColor }}
@@ -99,7 +93,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
           transition={{ delay: 0.4 }}
           className="mb-6"
         >
-          <h3 className="text-gold-400 font-serif text-lg mb-2">📜 运势解读</h3>
+          <h3 className="text-gold-400 font-serif text-lg mb-2">📜 {t('result.reading')}</h3>
           <p className="text-star-100/90 leading-relaxed text-sm md:text-base whitespace-pre-wrap">
             {result.reading}
           </p>
@@ -112,7 +106,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
           transition={{ delay: 0.6 }}
           className="mb-6"
         >
-          <h3 className="text-gold-400 font-serif text-lg mb-2">📊 幸运指数</h3>
+          <h3 className="text-gold-400 font-serif text-lg mb-2">📊 {t('result.luckIndex')}</h3>
           <div className="w-full h-64">
             <ResponsiveContainer width="100%" height="100%">
               <RadarChart data={chartData} cx="50%" cy="50%" outerRadius="70%">
@@ -154,7 +148,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          <h3 className="text-gold-400 font-serif text-lg mb-3">💡 开运建议</h3>
+          <h3 className="text-gold-400 font-serif text-lg mb-3">💡 {t('result.advice')}</h3>
           <div className="space-y-3">
             {result.advice.map((a, i) => (
               <motion.div
@@ -173,7 +167,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
 
         {/* Watermark for shared image */}
         <p className="text-center text-purple-300/30 text-xs mt-6">
-          fortune.demo.densematrix.ai · 纯属娱乐
+          {t('result.watermark')}
         </p>
       </div>
 
@@ -185,7 +179,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
           onClick={handleShare}
           className="px-6 py-3 bg-gradient-to-r from-gold-400 to-gold-300 text-mystic-900 font-bold rounded-full"
         >
-          📸 保存分享卡片
+          📸 {t('result.saveShare')}
         </motion.button>
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -193,7 +187,7 @@ export default function ResultPage({ result, idea, onReset }: Props) {
           onClick={onReset}
           className="px-6 py-3 border border-purple-400/40 text-purple-300 rounded-full hover:bg-purple-400/10"
         >
-          🔄 再算一次
+          🔄 {t('result.tryAgain')}
         </motion.button>
       </div>
     </motion.div>

@@ -1,0 +1,94 @@
+{
+  "title": "Voyant IA",
+  "subtitle": "Posez votre question et laissez l'IA prédire votre destin",
+  "inputPlaceholder": "Décrivez votre question... ex: Comment va ma vie amoureuse ? / Ma carrière va-t-elle prospérer ? / Dois-je changer de travail ?",
+  "charCount": "{{count}}/2000",
+  "styles": {
+    "tarot": {
+      "name": "Tarot",
+      "description": "Les cartes mystiques révèlent le destin"
+    },
+    "yijing": {
+      "name": "Yi King",
+      "description": "La sagesse ancienne guide le chemin"
+    },
+    "zodiac": {
+      "name": "Astrologie",
+      "description": "Les étoiles prédisent votre fortune"
+    },
+    "crystal": {
+      "name": "Boule de cristal",
+      "description": "Contemplez l'avenir"
+    }
+  },
+  "startFortune": "Consulter 🔮",
+  "noCredits": "Plus de crédits — Acheter",
+  "disclaimer": "Uniquement pour le divertissement",
+  "loading": {
+    "tarot": ["Mélange des cartes...", "Disposition du tirage...", "La roue du destin tourne...", "Lecture des cartes..."],
+    "yijing": ["Lancer des baguettes...", "Hexagramme en formation...", "La sagesse céleste émerge...", "Interprétation de l'oracle..."],
+    "zodiac": ["Lecture des étoiles...", "Alignement des planètes...", "Décodage de votre thème natal...", "Énergie cosmique en concentration..."],
+    "crystal": ["La boule de cristal brille...", "Les brumes se dissipent...", "Des visions apparaissent...", "Perception de l'avenir..."]
+  },
+  "result": {
+    "header": "Voyant IA",
+    "reading": "Lecture du destin",
+    "luckIndex": "Indice de chance",
+    "advice": "Conseils porte-bonheur",
+    "saveShare": "Sauvegarder & Partager",
+    "tryAgain": "Réessayer",
+    "watermark": "fortune.demo.densematrix.ai · Divertissement uniquement",
+    "generateFailed": "Échec de la génération d'image. Veuillez faire une capture d'écran."
+  },
+  "scores": {
+    "spread": "Viralité",
+    "funding": "Investissement",
+    "tech": "Technologie",
+    "users": "Croissance utilisateurs",
+    "competition": "Concurrence"
+  },
+  "credits": {
+    "remaining": "{{count}} restant(s)",
+    "freeTrial": "1 essai gratuit",
+    "exhausted": "Plus de crédits",
+    "buy": "Acheter des crédits"
+  },
+  "pricing": {
+    "title": "Acheter des consultations",
+    "subtitle": "Débloquez plus de lectures et explorez votre destin",
+    "freeTrialNote": "1 consultation gratuite par appareil",
+    "backHome": "← Retour à l'accueil",
+    "popular": "Populaire",
+    "perSession": "par consultation",
+    "save": "Économisez",
+    "buyNow": "Acheter maintenant",
+    "processing": "Traitement...",
+    "paymentError": "Échec du paiement. Veuillez réessayer.",
+    "securePayment": "Paiement sécurisé par Creem · Achat unique, sans abonnement",
+    "features": {
+      "styles": "4 styles de voyance",
+      "radar": "Radar de chance 5 dimensions",
+      "advice": "Conseils IA porte-bonheur",
+      "share": "Cartes de résultat partageables"
+    },
+    "products": {
+      "fortune_pack_3": "3 Consultations",
+      "fortune_pack_10": "10 Consultations"
+    }
+  },
+  "success": {
+    "title": "Paiement réussi !",
+    "subtitle": "Les crédits ont été ajoutés à votre compte",
+    "loadingToken": "Chargement de votre jeton...",
+    "tokenLabel": "Votre jeton (à conserver)",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "tokenHint": "Utilisez ce jeton pour restaurer vos crédits sur d'autres appareils",
+    "startFortune": "Commencer la consultation",
+    "buyMore": "Acheter plus"
+  },
+  "errors": {
+    "fortuneFailed": "Échec de la voyance",
+    "creditsExhausted": "Essai gratuit utilisé. Veuillez acheter des crédits pour continuer."
+  }
+}

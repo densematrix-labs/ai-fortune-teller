@@ -1,0 +1,94 @@
+{
+  "title": "Vidente IA",
+  "subtitle": "Haz tu pregunta y deja que la IA prediga tu destino",
+  "inputPlaceholder": "Describe tu pregunta... ej: ¿Cómo está mi vida amorosa? / ¿Prosperará mi carrera este año? / ¿Debería cambiar de trabajo?",
+  "charCount": "{{count}}/2000",
+  "styles": {
+    "tarot": {
+      "name": "Tarot",
+      "description": "Las cartas místicas revelan el destino"
+    },
+    "yijing": {
+      "name": "I Ching",
+      "description": "La sabiduría antigua guía el camino"
+    },
+    "zodiac": {
+      "name": "Astrología",
+      "description": "Las estrellas predicen tu fortuna"
+    },
+    "crystal": {
+      "name": "Bola de cristal",
+      "description": "Contempla el futuro"
+    }
+  },
+  "startFortune": "Consultar 🔮",
+  "noCredits": "Sin créditos — Comprar",
+  "disclaimer": "Solo para entretenimiento",
+  "loading": {
+    "tarot": ["Barajando cartas...", "Extendiendo la tirada...", "La rueda del destino gira...", "Leyendo las cartas..."],
+    "yijing": ["Lanzando varillas...", "Hexagrama formándose...", "La sabiduría celestial emerge...", "Interpretando el oráculo..."],
+    "zodiac": ["Leyendo las estrellas...", "Planetas alineándose...", "Decodificando tu carta natal...", "Energía cósmica concentrándose..."],
+    "crystal": ["La bola de cristal brilla...", "La niebla se disipa...", "Visiones aparecen...", "Sintiendo el futuro..."]
+  },
+  "result": {
+    "header": "Vidente IA",
+    "reading": "Lectura del destino",
+    "luckIndex": "Índice de suerte",
+    "advice": "Consejos de suerte",
+    "saveShare": "Guardar y Compartir",
+    "tryAgain": "Intentar de nuevo",
+    "watermark": "fortune.demo.densematrix.ai · Solo entretenimiento",
+    "generateFailed": "Error al generar imagen. Por favor haz una captura de pantalla."
+  },
+  "scores": {
+    "spread": "Viralidad",
+    "funding": "Inversión",
+    "tech": "Tecnología",
+    "users": "Crecimiento de usuarios",
+    "competition": "Competencia"
+  },
+  "credits": {
+    "remaining": "{{count}} restante(s)",
+    "freeTrial": "1 prueba gratis",
+    "exhausted": "Sin créditos",
+    "buy": "Comprar créditos"
+  },
+  "pricing": {
+    "title": "Comprar consultas",
+    "subtitle": "Desbloquea más lecturas y explora tu destino",
+    "freeTrialNote": "1 consulta gratis por dispositivo",
+    "backHome": "← Volver al inicio",
+    "popular": "Popular",
+    "perSession": "por consulta",
+    "save": "Ahorra",
+    "buyNow": "Comprar ahora",
+    "processing": "Procesando...",
+    "paymentError": "Error en el pago. Por favor intenta de nuevo.",
+    "securePayment": "Pago seguro por Creem · Compra única, sin suscripción",
+    "features": {
+      "styles": "4 estilos de adivinación",
+      "radar": "Radar de suerte 5 dimensiones",
+      "advice": "Consejos de suerte con IA",
+      "share": "Tarjetas de resultado compartibles"
+    },
+    "products": {
+      "fortune_pack_3": "3 Consultas",
+      "fortune_pack_10": "10 Consultas"
+    }
+  },
+  "success": {
+    "title": "¡Pago exitoso!",
+    "subtitle": "Los créditos se han añadido a tu cuenta",
+    "loadingToken": "Cargando tu token...",
+    "tokenLabel": "Tu token (guárdalo)",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "tokenHint": "Usa este token para restaurar créditos en otros dispositivos",
+    "startFortune": "Iniciar consulta",
+    "buyMore": "Comprar más"
+  },
+  "errors": {
+    "fortuneFailed": "Fallo en la adivinación",
+    "creditsExhausted": "Prueba gratis usada. Por favor compra créditos para continuar."
+  }
+}

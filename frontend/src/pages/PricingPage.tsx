@@ -4,20 +4,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { createCheckout } from '../api';
 import { getDeviceId } from '../lib/fingerprint';
 
 const products = [
   {
     sku: 'fortune_pack_3',
-    name: '3 次算命',
     generations: 3,
     price_cents: 799,
     popular: true,
   },
   {
     sku: 'fortune_pack_10',
-    name: '10 次算命',
     generations: 10,
     price_cents: 1999,
     discount_percent: 25,
@@ -25,20 +24,21 @@ const products = [
   },
 ];
 
-const features = [
-  '🃏 四种算命风格任选',
-  '📊 五维运势雷达图',
-  '💡 AI 开运建议',
-  '📸 可分享结果卡片',
-];
-
 function formatCurrency(cents: number): string {
   return `$${(cents / 100).toFixed(2)}`;
 }
 
 export default function PricingPage() {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState('');
+
+  const features = [
+    `🃏 ${t('pricing.features.styles')}`,
+    `📊 ${t('pricing.features.radar')}`,
+    `💡 ${t('pricing.features.advice')}`,
+    `📸 ${t('pricing.features.share')}`,
+  ];
 
   const handlePurchase = async (sku: string) => {
     setLoading(sku);
@@ -53,7 +53,7 @@ export default function PricingPage() {
       });
       window.location.href = response.checkout_url;
     } catch {
-      setError('创建支付失败，请稍后重试');
+      setError(t('pricing.paymentError'));
     } finally {
       setLoading(null);
     }
@@ -70,7 +70,7 @@ export default function PricingPage() {
         {/* Back nav */}
         <div className="w-full max-w-2xl mb-6">
           <Link to="/" className="text-purple-300/60 hover:text-purple-300 text-sm transition-colors">
-            ← 返回首页
+            {t('pricing.backHome')}
           </Link>
         </div>
 
@@ -82,11 +82,11 @@ export default function PricingPage() {
           className="text-center mb-8"
         >
           <h1 className="text-3xl md:text-4xl font-serif text-gold-400 mb-3">
-            ✨ 购买算命次数
+            ✨ {t('pricing.title')}
           </h1>
-          <p className="text-purple-300 text-lg">解锁更多次数，探索人生运势</p>
+          <p className="text-purple-300 text-lg">{t('pricing.subtitle')}</p>
           <p className="text-purple-300/40 text-sm mt-2 bg-mystic-700/50 inline-block px-3 py-1 rounded-lg">
-            🎁 每台设备可免费试用 1 次
+            🎁 {t('pricing.freeTrialNote')}
           </p>
         </motion.div>
 
@@ -112,12 +112,12 @@ export default function PricingPage() {
             >
               {product.popular && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-400 text-mystic-900 text-xs font-bold px-3 py-1 rounded-full">
-                  推荐
+                  {t('pricing.popular')}
                 </span>
               )}
 
               <h2 className="text-xl font-serif text-white text-center mb-2">
-                {product.name}
+                {t(`pricing.products.${product.sku}`)}
               </h2>
 
               <div className="text-center mb-1">
@@ -126,13 +126,13 @@ export default function PricingPage() {
                 </span>
                 {product.discount_percent && (
                   <span className="ml-2 text-sm text-green-400 font-medium">
-                    省 {product.discount_percent}%
+                    {t('pricing.save')} {product.discount_percent}%
                   </span>
                 )}
               </div>
 
               <p className="text-center text-purple-300/50 text-sm mb-4">
-                每次 {formatCurrency(Math.round(product.price_cents / product.generations))}
+                {formatCurrency(Math.round(product.price_cents / product.generations))} {t('pricing.perSession')}
               </p>
 
               <motion.button
@@ -146,7 +146,7 @@ export default function PricingPage() {
                 disabled={loading !== null}
                 onClick={() => handlePurchase(product.sku)}
               >
-                {loading === product.sku ? '处理中...' : '立即购买'}
+                {loading === product.sku ? t('pricing.processing') : t('pricing.buyNow')}
               </motion.button>
 
               <div className="space-y-2">
@@ -161,7 +161,7 @@ export default function PricingPage() {
         </div>
 
         <p className="text-purple-300/30 text-xs">
-          支付由 Creem 安全处理 · 一次性购买，无订阅
+          {t('pricing.securePayment')}
         </p>
       </motion.div>
     </>

@@ -1,0 +1,94 @@
+{
+  "title": "AI Fortune Teller",
+  "subtitle": "Ask your question and let AI divine your destiny",
+  "inputPlaceholder": "Describe your question... e.g.: How is my love life? / Will my career flourish this year? / Should I change jobs?",
+  "charCount": "{{count}}/2000",
+  "styles": {
+    "tarot": {
+      "name": "Tarot",
+      "description": "Mystical cards reveal fate"
+    },
+    "yijing": {
+      "name": "I Ching",
+      "description": "Ancient wisdom guides the way"
+    },
+    "zodiac": {
+      "name": "Astrology",
+      "description": "Stars foretell your fortune"
+    },
+    "crystal": {
+      "name": "Crystal Ball",
+      "description": "Gaze into the future"
+    }
+  },
+  "startFortune": "Get Fortune 🔮",
+  "noCredits": "No credits — Buy more",
+  "disclaimer": "For entertainment only",
+  "loading": {
+    "tarot": ["Shuffling cards...", "Laying out the spread...", "The wheel of fate turns...", "Reading the cards..."],
+    "yijing": ["Casting the yarrow...", "Hexagram forming...", "Heaven's wisdom emerges...", "Interpreting the oracle..."],
+    "zodiac": ["Reading the stars...", "Planets aligning...", "Decoding your natal chart...", "Cosmic energy gathering..."],
+    "crystal": ["Crystal ball glowing...", "Mists parting...", "Visions appearing...", "Sensing the future..."]
+  },
+  "result": {
+    "header": "AI Fortune Teller",
+    "reading": "Fortune Reading",
+    "luckIndex": "Luck Index",
+    "advice": "Lucky Tips",
+    "saveShare": "Save & Share",
+    "tryAgain": "Try Again",
+    "watermark": "fortune.demo.densematrix.ai · Entertainment only",
+    "generateFailed": "Failed to generate image. Please screenshot instead."
+  },
+  "scores": {
+    "spread": "Virality",
+    "funding": "Investment",
+    "tech": "Technology",
+    "users": "User Growth",
+    "competition": "Competition"
+  },
+  "credits": {
+    "remaining": "{{count}} left",
+    "freeTrial": "1 free trial",
+    "exhausted": "No credits",
+    "buy": "Buy Credits"
+  },
+  "pricing": {
+    "title": "Buy Fortune Credits",
+    "subtitle": "Unlock more readings and explore your destiny",
+    "freeTrialNote": "1 free reading per device",
+    "backHome": "← Back to Home",
+    "popular": "Popular",
+    "perSession": "per reading",
+    "save": "Save",
+    "buyNow": "Buy Now",
+    "processing": "Processing...",
+    "paymentError": "Payment failed. Please try again.",
+    "securePayment": "Secure payment by Creem · One-time purchase, no subscription",
+    "features": {
+      "styles": "4 fortune-telling styles",
+      "radar": "5-dimension luck radar",
+      "advice": "AI-powered lucky tips",
+      "share": "Shareable result cards"
+    },
+    "products": {
+      "fortune_pack_3": "3 Readings",
+      "fortune_pack_10": "10 Readings"
+    }
+  },
+  "success": {
+    "title": "Payment Successful!",
+    "subtitle": "Credits have been added to your account",
+    "loadingToken": "Loading your token...",
+    "tokenLabel": "Your Token (save this)",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "tokenHint": "Use this token to restore credits on other devices",
+    "startFortune": "Start Fortune",
+    "buyMore": "Buy More"
+  },
+  "errors": {
+    "fortuneFailed": "Fortune telling failed",
+    "creditsExhausted": "Free trial used. Please purchase credits to continue."
+  }
+}
